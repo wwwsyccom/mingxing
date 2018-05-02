@@ -1,0 +1,7 @@
+{
+    "component": true,
+    "usingComponents": {
+        "ident": "../../component/ident/ident",
+        "dail": "../../component/dail/dail"
+    }
+}

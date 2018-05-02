@@ -1,0 +1,15 @@
+<!-- <view class="ask-wrap" wx:if="{{false}}"> -->
+<view class="ask-wrap" bindtap="wrapTap">
+    <view class="ask" catchtap="preventPop">
+        <view class="top">
+            <text class="title">{{confirm.title}}</text>
+            <text class="desc">{{confirm.content}}</text>
+        </view>
+        <view class="buttons">
+            <text class="first" bindtap="leftTap">{{confirm.buttonLeft}}</text>
+            <!-- <text class="{{confirm.buttonClass}}" bindtap="rightTap">{{confirm.buttonRight}}</text> -->
+            <text class="class1" wx:if="{{confirm.buttonClass=='class1'}}" bindtap="rightTap">{{confirm.buttonRight}}</text>
+            <text class="class2" wx:if="{{confirm.buttonClass=='class2'}}" bindtap="rightTap">{{confirm.buttonRight}}</text>
+        </view>
+    </view>
+</view>

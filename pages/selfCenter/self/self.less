@@ -1,0 +1,146 @@
+@import "../../../common/common.less";
+.header{
+    height: 160rpx;
+    background: linear-gradient(#3323B2, #480481);
+    padding: 0 48rpx 0 40rpx;
+    .flex;
+    align-items: center;
+    .img-wrap{
+        width: 120rpx;
+        height: 120rpx;
+        border-radius: 200rpx;
+        overflow: hidden;
+        margin-right: 20rpx;
+        image{
+            width: 100%;
+            height: 100%;
+        }
+    }
+    .goIdent{
+        height: 100%;
+    }
+    .name{
+        font-size: 36rpx;
+        color: white;
+        text-align: center;
+        margin-bottom: 6rpx;
+    }
+    .checkin{
+        color: #3323B2;
+        font-size: 28rpx;
+        width: 112rpx;
+        height: 40rpx;
+        line-height: 40rpx;
+        background-color: white;
+        border-radius: 100rpx;
+        text-align: center;
+    }
+    .status{
+        margin-left: 10rpx;
+        font-size: 18rpx;
+        color: white;
+        align-self: flex-start;
+        position: relative;
+        top: 48rpx;
+        &.icon{
+            flex-grow: 0;
+            &:before{
+                content: '\e625';
+                color: white;
+            }
+        }
+    }
+    .icon{
+        flex-grow: 1;
+        justify-content: flex-end;
+        &:before{
+            content: '\e600';
+            font-size: 32rpx;
+            color: white;
+            margin-right: 0px;
+        }
+    }
+}
+.list-wrap{
+    margin-top: 20rpx;
+    background-color: white;
+    .list{
+        height: 84rpx;
+        padding: 0px 24rpx;
+        border-bottom: 1px solid #ececec;
+        .flex;
+        align-items: center;
+        font-size: 28rpx;
+        .title{
+            flex-grow: 1;
+            color: #666666;
+        }
+        .value{
+            color: #989898;
+        }
+    }
+    .icon-after:after{
+        content: '\e600';
+        font-size: 32rpx;
+        color: #989898;
+        margin-left: 16rpx;
+    }
+    .tel{
+        color: #3323B2;
+    }
+}
+.set-photo-wrap{
+    .fixed;
+    .flex;
+    padding-bottom: 20rpx;
+    align-items: flex-end;
+    justify-content: center;
+    .set-photo{
+        width: @rpx * 335;
+        .set{
+            border-radius: 20rpx;
+            background-color: white;
+            text-align: center;
+            overflow: hidden;
+            .title{
+                color: #666666;
+                font-size: 24rpx;
+                height: 80rpx;
+                line-height: 80rpx;
+            }
+            .take-photo, .choose{
+                color: #3323B2;
+                font-size: 28rpx;
+                height: 84rpx;
+                line-height: 84rpx;
+                border-top: 1px solid #ececec;
+            }
+        }
+        .cancel{
+            margin-top: 20rpx;
+            border-radius: 20rpx;
+            background-color: white;
+            height: 80rpx;
+            line-height: 80rpx;
+            text-align: center;
+            font-size: 28rpx;
+            color: #3323B2;
+        }
+    }
+}
+.admitting-wrap{
+    .fixed;
+    .flex;
+    justify-content: center;
+    .admitting{
+        margin-top: 320rpx;
+        width: @rpx * 335;
+        height: 80rpx;
+        line-height: 80rpx;
+        text-align: center;
+        color: #666666;
+        background-color: white;
+        border-radius: 20rpx;
+        font-size: 28rpx;
+    }
+}

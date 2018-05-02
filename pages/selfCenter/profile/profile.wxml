@@ -1,0 +1,19 @@
+<view class="list-wrap">
+    <view class="list icon-after {{userInfo.rzstatus=='已认证'?'admitted':'arrow'}}" bindtap="goIdent">
+        <text class="title">认证信息</text>
+        <text class="value">{{userInfo.nickname}} {{userInfo.rzstatus!='已认证'?userInfo.rzstatus:''}}</text>
+    </view>
+</view>
+<!-- <view class="list-wrap">
+    <view class="list icon-after admitted">
+        <text class="title">认证信息</text>
+        <text class="value">kkk</text>
+    </view>
+</view> -->
+<view class="list-wrap">
+    <navigator url="/pages/selfCenter/phone/phone" open-type="navigateTo" class="list {{userInfo.mobile?'':'icon-after arrow'}}">
+        <text class="title">{{userInfo.mobile?'更换':''}}绑定手机</text>
+        <text wx:if="{{userInfo.mobile}}" class="value">{{userInfo.mobile}}</text>
+    </navigator>
+</view>
+<confirm confirm="{{confirm}}" bind:leftTap="cancelIdent" bind:rightTap="bindPhone" wx:if="{{showBindPhone}}" bind:wrapTap="cancelIdent"></confirm>

@@ -1,0 +1,1 @@
+<button bindtap="tapped" style="{{styleStr}}" disabled="{{disabled}}" loading="{{loading}}">{{title}}</button>

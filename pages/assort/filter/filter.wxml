@@ -1,0 +1,27 @@
+<view class="page">
+    <!-- <search bind:searchTapped="searchTapped"></search> -->
+    <search showFilter="{{showFilter}}" bind:showFilter="showFilter" bind:closeFilter="closeFilter" bind:searchTapped="searchTapped"></search>
+    <cat-nav cat="{{cat}}" bind:chooseCat="chooseCat"></cat-nav>
+    <view class="slider-wrap" wx:if="{{starList.length>0}}">
+        <scroll-view scroll-y="true" scroll-into-view="{{intoView}}" scroll-with-animation="true">
+            <block wx:for="{{starList}}">
+                <block wx:if="{{item.data.length>0}}">
+                    <view class="starIndex" id="id-{{item.key}}">{{item.key}}</view>
+                    <view class="star-wrap" wx:for="{{item.data}}">
+                        <star star="{{item}}" userInfo="{{userInfo}}"></star>
+                    </view>
+                </block>
+            </block>
+        </scroll-view>
+        <!-- <view class="letter-wrap"> -->
+        <scroll-view class="letter-wrap">
+            <block wx:for="{{starList}}">
+                <text class="letter" wx:if="{{item.data.length>0}}" data-id="{{item.key}}" bindtap="scroll">{{item.key}}</text>
+            </block>
+        </scroll-view>
+        <!-- </view> -->
+    </view>
+    <view class="no-result" wx:elif="{{starList.length==0&&!loading}}">
+        <text>很抱歉，没有找到该明星</text>
+    </view>
+</view>

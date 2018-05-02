@@ -1,0 +1,55 @@
+{
+	"pages":[
+		"pages/index/index",
+        "pages/selfCenter/ident/ident",
+        "pages/selfCenter/upload/upload",
+        "pages/selfCenter/self/self",
+        "pages/wallet/remain/remain",
+        "pages/selfCenter/collect/collect",
+        "pages/assort/detail/detail",
+        "pages/selfCenter/profile/profile",
+        "pages/selfCenter/phone/phone",
+        "pages/assort/remark/remark",
+        "pages/category/category",
+        "pages/h5/h5",
+        "pages/assort/filter/filter",
+        "pages/search/search",
+        "pages/others/about/about",
+        "pages/others/secret/secret",
+        "pages/others/questions/questions",
+        "pages/wallet/withdraw/withdraw",
+        "pages/wallet/record/record",
+        "pages/selfCenter/orders/orders",
+		"pages/subject/subject"
+	],
+	"window":{
+		"backgroundTextStyle":"light",
+		"navigationBarBackgroundColor": "#3323B2",
+		"navigationBarTitleText": "明星在线",
+		"navigationBarTextStyle":"white"
+    },
+    "tabBar":{
+        "color": "#5B5B5B",
+        "backgroundColor": "white",
+        "list": [
+            {
+                "pagePath": "pages/index/index",
+                "iconPath": "images/home.png",
+                "selectedIconPath": "images/home-active.png",
+                "text": "首页"
+            },
+            {
+                "pagePath": "pages/category/category",
+                "iconPath": "images/star.png",
+                "selectedIconPath": "images/star-active.png",
+                "text": "明星"
+            },
+            {
+                "pagePath": "pages/selfCenter/self/self",
+                "iconPath": "images/my.png",
+                "selectedIconPath": "images/my-active.png",
+                "text": "我的"
+            }
+        ]
+    }
+}

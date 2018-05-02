@@ -1,0 +1,21 @@
+<view class="input-wrap">
+    <view class="list">
+        <label for="">{{changePhone?'原':''}}手机号</label>
+        <input type="number" disabled="{{changePhone?true:false}}" placeholder="{{phone1||'请输入手机号'}}" placeholder-style="color:#989898;" bindinput="phoneInput" />
+    </view>
+    <view class="list">
+        <label for="">验证码</label>
+        <input type="text" class="code-input" placeholder="请输入验证码" placeholder-style="color:#989898;" bindinput="codeInput" />
+        <view class="code-wrap">
+            <view class="code {{codeWaiting?'waiting':''}}" bindtap="getCode">{{codeTxt}}</view>
+        </view>
+    </view>
+    <view class="list" wx:if="{{changePhone}}">
+        <label for="">新手机号</label>
+        <input type="text" placeholder="请输入新手机号码" placeholder-style="color:#989898;" bindinput="phoneInput" />
+    </view>
+</view>
+<view class="bottom">
+    <text class="error" wx:if="{{codeFail}}">验证码错误</text>
+    <button class="button" bindtap="confirm" loading="{{buttonLoading}}" disabled="{{buttonDisabled}}">确认</button>
+</view>

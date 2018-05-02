@@ -1,0 +1,102 @@
+@import "../../common/common.less";
+.search-header{
+    width: 100%;
+    height: 84rpx;
+    background-color: white;
+    .center-center;
+    .filter{
+        margin-left: 20rpx;
+        &:before{
+            content: '\ee96';
+            color: black;
+            font-size: 40rpx;
+            margin-left: 0;
+        }
+    }
+    .search-wrap{
+        width: @rpx * 325rpx;
+        height: 48rpx;
+        border: 1px solid #E9E9E9;
+        border-radius: 100rpx;
+        box-sizing: border-box;
+        justify-content: start;
+        padding-left: 20rpx;
+        &:before{
+            content: '\e62e';
+            font-size: 24rpx;
+            margin-right: 12rpx;
+        }
+    }  
+    input{
+        font-size: 28rpx;
+        width: 500rpx;
+    }
+}
+.filter-wrap{
+    position: fixed;
+    top: 0px;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    z-index: 999;
+    background-color: #f9f9f9;
+    overflow: auto;
+    .close{
+        position: absolute;
+        top: 50rpx;
+        right: 40rpx;
+        width: 30rpx;
+        height: 30rpx;
+        overflow: visible;
+        .center-center;
+        &::before{
+            content: '\e63d';
+            color: #979797;
+            font-size: 30rpx;
+        }
+    }
+    .filter{
+        padding: 40rpx;
+        .section{
+            margin-bottom: 40rpx;
+            .clear;
+            .title{
+                font-size: 28rpx;
+                color: #646464;
+                display: block;
+                margin-bottom: 28rpx;
+                font-weight: bold;
+                .active{
+                    border-bottom: 4rpx solid #3323B2;
+                }
+                .t1{
+                    margin-right: 20rpx;
+                }
+                .t2{
+                    color: #959595;
+                    font-weight: normal;
+                }
+            }
+            .list{
+                float: left;
+                text{
+                    margin-right: 20rpx;
+                    margin-bottom: 20rpx;
+                    padding: 8rpx 20rpx;
+                    color: #666666;
+                    font-size: 28rpx;
+                    border: 1px solid #ececec;
+                    float: left;
+                }
+                .active{
+                    font-weight: bold;
+                    color: #3323B2;
+                }
+            }
+        }
+        .button-bottom-wrap{
+            margin: 0 auto;
+            margin-top: 40rpx;
+        }
+    }
+}

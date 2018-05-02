@@ -1,0 +1,18 @@
+<navigator class="star" url="/pages/assort/detail/detail?id={{star.starid}}" open-type="navigate">
+    <view class="photo">
+        <!-- <image src="" mode="aspectFill" src="{{star.picid}}"></image> -->
+        <image src="" mode="aspectFill" src="{{star.star_avatar||star.picid}}"></image>
+    </view>
+    <view class="detail">
+        <view class="top">
+            <view class="name-wrap top-item">
+                <text class="name">{{star.chinesename||star.star_name}}</text><view class="dailed icon"><text class="desc">{{star.called}}人已拨打</text></view>
+            </view>
+            <view class="top-item"><text class="key">经纪人:</text><text class="value">{{star.agentname||star.agent_name}}</text></view>
+            <view class="top-item"><text class="key">手机号:</text><text class="value">{{star.agent||star.agent_phone}}</text></view>
+            <text class="ident">{{userInfo.rzstatus=='已认证'?star.costdetail:'查看报价需认证'}}</text>
+        </view>
+        <view class="dail" catch:tap="dail">拨打电话</view>
+    </view>
+</navigator>
+<dail wx:if="{{showDail}}" starId="{{star.starid}}" bind:cancel="cancelDail"></dail>

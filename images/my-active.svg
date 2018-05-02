@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="21px" height="22px" viewBox="0 0 21 22" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 49.3 (51167) - http://www.bohemiancoding.com/sketch -->
+    <title>my 2</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="my-2" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Group" transform="translate(5.000000, 0.000000)" fill="#3323B2" fill-rule="nonzero">
+            <path d="M0,6.5 C-0.000131840081,8.82218239 1.23873233,10.9680238 3.24989347,12.1291531 C5.26105461,13.2902823 7.73894539,13.2902823 9.75010653,12.1291531 C11.7612677,10.9680238 13.0001318,8.82218239 13,6.5 C13.0001318,4.17781761 11.7612677,2.03197619 9.75010653,0.870846939 C7.73894539,-0.290282313 5.26105461,-0.290282313 3.24989347,0.870846939 C1.23873233,2.03197619 -0.000131840076,4.17781761 0,6.5 Z" id="Shape"></path>
+        </g>
+        <path d="M21,21.5 C21,15.7010101 16.2989899,11 10.5,11 C4.70101013,11 0,15.7010101 0,21.5" id="Oval-5" fill="#3323B2"></path>
+    </g>
+</svg>

@@ -1,0 +1,26 @@
+<view class="subject" wx:if="{{theme && theme.data && theme.data.length>0}}">
+    <header>
+        <text>{{theme.theme_name}}</text>
+        <navigator wx:if="{{theme.queryParam}}" url="/pages/assort/filter/filter?{{theme.queryParam}}"  hover-class="navigator-hover" open-type="navigate">更多</navigator>
+        <navigator wx:else url="/pages/subject/subject?themeId={{theme.theme_id}}"  hover-class="navigator-hover" open-type="navigate">更多</navigator>
+    </header>
+    <scroll-view class="slider-wrap" scroll-x>
+        <ul>
+            <block wx:for="{{theme.data}}">
+                <li>
+                    <navigator url="/pages/assort/detail/detail?id={{item.starid}}"  hover-class="navigator-hover" open-type="navigate">
+                        <image src="{{item.star_avatar}}" alt="" mode="aspectFill" />
+                        <view class="tel icon">{{item.called}}</view>
+                        <view class="desc">
+                            <text class="name">{{item.star_name}}</text>
+                            <view>
+                                <text>{{userInfo.rzstatus=='已认证'?item.costdetail:'报价需认证'}}</text>
+                                <text class="num icon">{{item.look}}</text>
+                            </view>
+                        </view>
+                    </navigator>
+                </li>
+            </block>
+        </ul>
+    </scroll-view>
+</view>

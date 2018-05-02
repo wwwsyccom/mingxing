@@ -1,0 +1,10 @@
+{
+    "navigationBarBackgroundColor": "white",
+    "navigationBarTextStyle": "black",
+    "usingComponents": {
+        "star": "../../component/star/star",
+        "search": "../../component/search/search",
+        "confirm": "../../component/confirm/confirm",
+        "cat-nav": "../../component/category-nav/category-nav"
+    }
+}

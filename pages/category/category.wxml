@@ -1,0 +1,5 @@
+<search showFilter="{{showFilter}}" bind:showFilter="showFilter" bind:closeFilter="closeFilter" bind:searchTapped="searchTapped"></search>
+<cat-nav cat="{{cat}}" bind:chooseCat="chooseCat"></cat-nav>
+<block wx:for="{{catListShow}}">
+    <cat theme="{{item}}" userInfo="{{userInfo}}"></cat>
+</block>

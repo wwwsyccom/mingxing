@@ -1,0 +1,41 @@
+@import "../../../common/common.less";
+page{
+    padding: 20rpx;
+    box-sizing: border-box;
+    width: 100%;
+}
+navigator{
+    background-color: white;
+    padding: 40rpx 20rpx 80rpx;
+    box-sizing: border-box;
+    background-color: white;
+    margin-bottom: 40rpx;
+    border-radius: 20rpx;
+    .flex;
+    flex-direction: column;
+    .title{
+        .flex;
+        flex-direction: column;
+        padding-bottom: 20rpx;
+        border-bottom: 1px solid #ececec;
+        color: #444444;
+        font-size: 36rpx;
+        align-items: center;
+        &:before{
+            content: '\e603';
+            color: black;
+            font-size: 60rpx;
+            margin-bottom: 20rpx;
+        }
+    }
+    .desc{
+        margin-top: 20rpx;
+        font-size: 28rpx;
+        color: #444444;
+        opacity: .82;
+        text-align: center;
+        view{
+            margin-bottom: 10rpx;
+        }
+    }
+}

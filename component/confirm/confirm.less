@@ -1,0 +1,65 @@
+@import "../../common/common.less";
+.ask-wrap{
+    position: fixed;
+    z-index: 999;
+    top: 0px;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    background: rgba(0,0,0,0.5);
+    .center-center;
+    .ask{
+        width: 600rpx;
+        background-color: white;
+        border-radius: 20rpx;
+        overflow: hidden;
+        .top{
+            padding: 60rpx 56rpx;
+            border-bottom: 1px solid #ececec;
+            .title{
+                color: #444444;
+                font-size: 36rpx;
+                display: block;
+                text-align: center;
+                margin-bottom: 40rpx;
+            }
+            .desc{
+                display: block;
+                color: #444444;
+                opacity: 0.82;
+                text-align: center;
+                margin-bottom: 30rpx;
+                font-size: 28rpx;
+            }
+        }
+        .buttons{
+            height: 80rpx;
+            .flex;
+            text{
+                flex-grow: 1;
+                height: 100%;
+                font-size: 28rpx;
+                line-height: 80rpx; 
+                text-align: center;
+                color: #444444;
+                &.class1{
+                    color: white;
+                    background-color: #3323B2;
+                }
+                &.class2{
+                    color: #3323B2;
+                }
+            } 
+            .class1{
+                color: white;
+                background-color: #3323B2;
+            }
+            .class2{
+                color: #3323B2;
+            }
+            .first{
+                border-right: 1px solid #ececec;
+            }
+        }
+    }
+}

@@ -1,0 +1,36 @@
+<view class="wrap">
+    <navigator class="record" url="/pages/wallet/record/record" hover-class="navigator-hover" open-type="navigate">交易记录</navigator>
+    <view class="icon icon1"></view>
+    <view class="remain">我的余额</view>
+    <view class="icon money">{{money}}</view>
+    <view class="button-wrap">
+        <button wx:if="{{userInfo.type=='1'&&userInfo.rzstatus=='已认证'}}" class="withdraw button" bindtap="withdraw">提现</button>
+        <button class="charge button" bindtap="charge">充值</button>
+    </view>
+    <view class="tip">
+        <view class="title">钱包变胖小法则</view>
+        <view class="list icon"><text>提交认证并通过认证之后可获得50颗星币;</text></view>
+        <view class="list icon"><text>分享一个资源到微信朋友圈可获得5颗星币(每天仅限3次);</text></view>
+        <view class="list icon"><text>拨打电话后对明星评价可获得10颗星币</text></view>
+        <view class="list icon"><text>每天签到可获得2颗星币</text></view>
+    </view>
+    <view class="custom">
+        <view>客服热线</view>
+        <view><text>010-60844165</text></view>
+    </view>
+</view>
+<view class="ask-wrap" wx:if="{{showCharge}}" bindtap="cancelCharge">
+    <view class="ask" catchtap="cancelBuble">
+        <view class="top">
+            <text class="title">立即充值</text>
+            <view class="choose">
+                <view class="price {{chargeFee==60?'active':''}}" data-amount="60" bindtap="chooseAmount">60星币 (50元)</view>
+                <view class="price {{chargeFee==130?'active':''}}" bindtap="chooseAmount" data-amount="130">130星币 (100元)</view>
+            </view>
+        </view>
+        <view class="button-wrap">
+            <text class="first" bindtap="cancelCharge">取消</text>
+            <text class="class2" bindtap="pay">支付</text>
+        </view>
+    </view>
+</view>

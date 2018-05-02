@@ -1,0 +1,7 @@
+{
+    "navigationBarBackgroundColor": "white",
+    "navigationBarTextStyle": "black",
+    "usingComponents": {
+        "confirm": "../../../component/confirm/confirm"
+    }
+}

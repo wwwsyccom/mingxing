@@ -1,0 +1,9 @@
+{
+    "navigationBarBackgroundColor": "white",
+    "navigationBarTextStyle": "black",
+    "usingComponents": {
+        "search": "../../../component/search/search",
+        "cat-nav": "../../../component/category-nav/category-nav",
+        "star": "../../../component/star/star"
+    }
+}

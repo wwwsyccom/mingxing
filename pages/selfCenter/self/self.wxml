@@ -1,0 +1,59 @@
+<view class="header">
+    <view class="img-wrap" bindtap="changePhoto">
+        <image mode="aspectFill" src="{{photo}}"></image>
+        <!-- <image mode="aspectFill" src="http://static.findingstar.com/o_1c2avjaij10kq1uq1e1nqdh7uvm.png"></image> -->
+    </view>
+    <view class="">
+        <view class="name">{{userInfo.nickname}}</view>
+        <view class="checkin" bindtap="checkin">{{checkin}}</view>
+    </view>
+    <view class="status {{userInfo.rzstatus=='已认证'?'icon':''}}" bindtap="ident">{{userInfo.rzstatus=='已认证'?'':userInfo.rzstatus}}</view>
+    <view class="icon goIdent" bindtap="ident"></view>
+</view>
+<view class="list-wrap">
+    <navigator class="list icon-after" open-type="navigateTo" url="/pages/selfCenter/orders/orders">
+        <text class="title">我的订单</text>
+    </navigator>
+    <navigator class="list icon-after" open-type="navigateTo" url="/pages/wallet/remain/remain">
+        <text class="title">我的余额</text>
+        <text class="value">{{userInfo.coin}}星币</text>
+    </navigator>
+</view>
+<view class="list-wrap">
+    <!-- <navigator class="list icon-after">
+        <text class="title">我的预约</text>
+    </navigator> -->
+    <navigator class="list icon-after" open-type="navigateTo" url="/pages/selfCenter/collect/collect">
+        <text class="title">我的收藏</text>
+    </navigator>
+</view>
+<!-- <view class="list-wrap">
+    <navigator class="list icon-after">
+        <text class="title">设置</text>
+    </navigator>
+</view> -->
+<view class="list-wrap">
+    <!-- <navigator class="list icon-after" open-type="navigateTo" url="/pages/selfCenter/collect">
+        <text class="title">我要合作</text>
+    </navigator> -->
+    <navigator class="list icon-after" open-type="navigateTo" url="/pages/others/about/about">
+        <text class="title">关于我们</text>
+    </navigator>
+    <view class="list">
+        <text class="title">客服电话</text>
+        <text class="tel">010-60885088</text>
+    </view>
+</view>
+<view class="set-photo-wrap" wx:if="{{changePhoto}}">
+    <view class="set-photo">
+        <view class="set">
+            <view class="title">设置头像</view>
+            <view class="take-photo" bindtap="uploadPhoto" data-source="camera">拍照</view>
+            <view class="choose" bindtap="uploadPhoto" data-source="album">去相册选择</view>
+        </view>
+        <view class="cancel" bindtap="cancelPhoto">取消</view>
+    </view>
+</view>
+<!-- <view class="admitting-wrap>
+    <view class="admitting">您的认证工作人员正在加紧审核中</view>
+</view> -->

@@ -1,0 +1,29 @@
+@import "../../common/common.less";
+.notice-wrap{
+    z-index: 999;
+    position: fixed;
+    top: 0px;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    background-color: rgba(0,0,0,0.5);
+    .center-center;
+    .notice{
+        background-color: white;
+        border-radius: 10rpx;
+        .flex;
+        flex-direction: column;
+        .center-center;
+        font-size: 28rpx;
+        color: #444444;
+        width: 240rpx;
+        height: 240rpx;
+        &:before{
+            content: '\e603';
+            margin-right: 0px;
+            color: #3323B2;
+            margin-bottom: 30rpx;
+            font-size: 50rpx;
+        }
+    }
+}

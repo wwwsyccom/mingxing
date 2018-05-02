@@ -1,0 +1,7 @@
+{
+    "navigationBarBackgroundColor": "white",
+    "navigationBarTextStyle": "black",
+    "usingComponents": {
+        "dail": "../../../component/dail/dail"
+    }
+}

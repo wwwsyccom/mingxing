@@ -1,0 +1,42 @@
+@import "../../../common/common.less";
+page{
+    padding-top: 20rpx;
+    height: 100vh;
+    .flex;
+    overflow: hidden;
+}
+.wrap{
+    background-color: white;
+    width: 100%;
+    overflow: auto;
+    .list{
+        padding: 20rpx 24rpx;
+        height: 120rpx;
+        border-bottom: 1px solid #ececec;
+        .flex;
+        box-sizing: border-box;
+        justify-content: space-between;
+        .left{
+            .flex-c;
+            justify-content: space-between;
+            .desc{
+                font-size: 28rpx;
+                color: #666666;
+            }
+            .date{
+                font-size: 24rpx;
+                color: #9b9b9b;
+            }
+        }
+        .right{
+            .center-center;
+            font-size: 36rpx;
+            &.inc{
+                color: #6ECC01;
+            }
+            &.dec{
+                color: #646464;
+            }
+        }
+    }
+}

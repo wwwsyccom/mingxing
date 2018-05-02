@@ -1,0 +1,33 @@
+<block wx:for="{{orders}}">
+    <view class="order">
+        <navigator url="/pages/assort/detail/detail?id={{item.starid}}" class="top" open-type="navigate">
+            <view class="img-wrap"><image src="{{item.star_pic}}" mode="aspectFill"></image></view>
+            <view class="desc">
+                <text class="name">{{item.chinesename}}</text>
+                <text class="consume">消耗星币<text class="num">{{item.coin_fee}}</text></text>
+                <text class="consume">报价金额<text class="num"></text></text>
+            </view>
+            <view class="date">{{item.createtime}}</view>
+        </navigator>
+        <view class="below">
+            <view class="{{item.is_comment?'commented':''}}" bindtap="toComment" data-item="{{index}}">立即评价</view><view bindtap="showDail" data-id="{{item.starid}}">再次联系</view>
+        </view>
+    </view>
+</block>
+<view class="remark-wrap" wx:if="{{showComment}}">
+    <view class="remark">
+        <text class="title">请输入评论内容：</text>
+        <textarea placeholder="评论内容不少于5个字" placeholder-style="color:#989898;" bindinput="getContent"></textarea>
+        <view class="button-wrap">
+            <view class="cancel" bindtap="cancel">取消</view>
+            <view bindtap="confirm">立即评价</view>
+        </view>
+    </view>
+</view>
+<dail wx:if="{{showDail}}" starId="{{starId}}" bind:cancel="cancelDail"></dail>
+<!-- <view class="no-order-wrap">
+    <view class="no-order">
+        <view>您还没有订单</view>
+        <view class="nav-wrap"><text>您还可以试试</text><navigator>搜索明星</navigator></view>
+    </view>
+</view> -->

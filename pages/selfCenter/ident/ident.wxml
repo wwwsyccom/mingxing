@@ -1,0 +1,14 @@
+<navigator url="/pages/selfCenter/upload/upload?ident=1" hover-class="navigator-hover" open-type="navigate">
+    <view class="title icon">经纪人/经济公司认证</view>
+    <view class="desc">
+        <view>快速了解明星咨询和动态;</view>
+        <view>管理钱包零钱进行提现。</view>
+    </view>
+</navigator>
+<navigator url="/pages/selfCenter/upload/upload?ident=0" hover-class="navigator-hover" open-type="navigate">
+    <view class="title icon">企业认证</view>
+    <view class="desc">
+        <view>尊享平台金牌服务;了解明星最新商演报价;</view>
+        <view>一键直通您想要沟通的明星更加优惠</view>
+    </view>
+</navigator>

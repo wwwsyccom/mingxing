@@ -1,0 +1,10 @@
+<view class="list">
+    <view class="remark-info">
+        <view class="left">
+            <view class="img-wrap"><image src="{{remark.photo}}" mode="aspectFill"></image></view>
+            <text class="name">{{remark.nickname}}</text>
+        </view>
+        <text class="date">{{remark.createtime}}</text>
+    </view>
+    <text class="detail">{{remark.content}}</text>
+</view>

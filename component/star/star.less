@@ -1,0 +1,75 @@
+@import '../../common/common.less';
+.star{
+    padding: 40rpx;
+    background-color: white;
+    //border-bottom: 1px solid #ececec;
+    height: @rpx * 198;
+    .flex;
+    .photo, .detal{
+        height: 100%;
+    }
+    .photo{
+        width: @rpx *144;
+        margin-right: 20rpx;
+        overflow: hidden;
+        image{
+            width: 100%;
+            height: 100%;
+        }
+    }
+    .detail{
+        flex-grow: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        .top-item{
+            margin-bottom: 20rpx;
+            font-size: 28rpx;
+        }
+        .name-wrap{
+            .flex-between;
+            .name{
+                font-size: 36rpx;
+                color: #444444;
+            }
+            .dailed{
+                font-size: 28rpx;
+                &:before{
+                    content: '\e603';
+                    color: #3323B2;
+                    position: relative;
+                    top: 4rpx;
+                }
+                .desc{
+                    color: #444444;
+                    opacity: 0.82;
+                }
+            }
+        }
+        .key{
+            color: #444444;
+            opacity: 0.55;
+            margin-right: 10rpx;
+        }
+        .value{
+            color: #444444;
+            opacity: 0.82;
+        }
+        .ident{
+            color: #444444;
+            opacity: 0.82;
+            font-size: 28rpx;
+        }
+        .dail{
+            margin-bottom: 0px;
+            width: 248rpx;
+            height: 60rpx;
+            line-height: 60rpx;
+            background-color: #3323B2;
+            color: white;
+            text-align: center;
+            border-radius: 200rpx;
+            font-size: 28rpx;
+        }
+    }
+}

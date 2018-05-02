@@ -1,0 +1,3 @@
+<view class="notice-wrap">
+    <view class="notice icon"><text>{{title}}</text></view>
+</view>

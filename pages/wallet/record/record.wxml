@@ -1,0 +1,10 @@
+<view class="wrap">
+    <view class="list" wx:for="{{list}}" wx:key="{{item.createtime}}">
+        <view class="left">
+            <text class="desc">{{item.title}}</text>
+            <text class="date">{{item.createtime}}</text>
+        </view>
+        {{parseInt('100')}}
+        <view class="right {{item.total_coin>0?'inc':''}}">{{item.total_coin>0?'+':''}}{{item.total_coin}}</view>
+    </view>
+</view>

@@ -1,0 +1,14 @@
+<view class="wrap">
+    <view class="title">可提现金额：<text class="money">{{rmb}}</text> 元({{coin}}星币)</view>
+    <view class="" style="font-size:28rpx;color:#666666;margin-bottom:20rpx;">输入提现金额:</view>
+    <view class="input-wrap icon">
+        <input type="number" bindinput="inputMoney" />
+    </view>
+    <view style="font-size:24rpx;text-align: center;">剩余金额{{rmbRemain}}元({{coinRemain}}星币)</view>
+    <view class="button-wrap">
+        <button style="width:300rpx;" class="button" bindtap="confirm" loading="{{buttonLoading}}">确定</button>
+        <!-- <button-c style-str="width:300rpx;" bin></button-c> -->
+    </view>
+    <view class="tip">提现会在三个工作日内完成，</view>
+    <view class="tip">提现金额会转到当前绑定的微信零钱里，请留意。</view>
+</view>

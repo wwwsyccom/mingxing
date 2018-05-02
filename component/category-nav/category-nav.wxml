@@ -1,0 +1,7 @@
+<ul class="cat-nav">
+    <li bindtap="choose" data-cat="all" class="{{cat=='all'?'active':''}}">全部</li>
+    <li bindtap="choose" data-cat="singer" class="{{cat=='singer'?'active':''}}">歌手</li>
+    <li bindtap="choose" data-cat="actor" class="{{cat=='actor'?'active':''}}">演员</li>
+    <li bindtap="choose" data-cat="mul" class="{{cat=='mul'?'active':''}}">综艺</li>
+    <li bindtap="choose" data-cat="others" class="{{cat=='others'?'active':''}}">其他</li>
+</ul>

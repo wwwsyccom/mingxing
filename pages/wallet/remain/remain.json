@@ -1,0 +1,7 @@
+{
+    "navigationBarBackgroundColor": "white",
+    "navigationBarTextStyle": "black",
+    "usingComponents": {
+        "button-c": "../../../component/button/button"
+    }
+}

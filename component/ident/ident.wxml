@@ -1,0 +1,1 @@
+<confirm confirm="{{confirm}}" bind:leftTap="cancel" bind:rightTap="confirm"></confirm>

@@ -1,0 +1,74 @@
+<view class="ident-wrap" wx:if="{{showIdent}}">
+    <view class="ident">
+        <!-- <icon type="clear" color="black"></icon> -->
+        <close bind:close="closeIdent"></close>
+        <text class="title">认证领星币</text>
+        <text class="desc">实名认证后可免费获得星币，可用来联系明星经纪人等其他权益。</text>
+        <navigator url="/pages/selfCenter/profile/profile" hover-class="navigator-hover" open-type="navigate">立即认证</navigator>
+    </view>
+</view>
+<view class="search-header">
+    <navigator url="/pages/search/search" open-type="navigate">
+        <icon type="search" size="12"></icon>
+        <text>搜索明星</text>
+    </navigator>
+</view>
+<view class="banner-wrap">
+    <swiper interval="2500" duration="300" autoplay="true" circular="true" indicator-color="white" indicator-active-color="#3323B2" bindchange="swiperChange">
+        <block wx:for="{{bannerImgs}}">
+            <swiper-item>
+                <navigator url="/pages/h5/h5?url={{item.jumpurl}}" hover-class="navigator-hover" open-type="navigate">
+                <!-- <web-view src="https://dev.findingstar.com"> -->
+                    <image  mode="aspectFill" src="{{item.picpath}}" />
+                <!-- </web-view> -->
+                </navigator>
+            </swiper-item>
+        </block>
+    </swiper>
+    <view class="dots">    
+        <block wx:for="{{bannerImgs}}">    
+            <view class="dot {{index == currentSwiper ? 'active' : ''}}"></view>    
+        </block>    
+    </view> 
+</view>
+<view class="category">
+    <navigator url="" hover-class="navigator-hover" bindtap="tapCat" data-cat="singer">
+        <image src="../../images/singer.png" alt="" mode="aspectFill" />
+        <view>
+            <text class="zh">歌手</text>
+            <text class="en">Singer</text>
+        </view>
+    </navigator>
+    <navigator url="" hover-class="navigator-hover" bindtap="tapCat" data-cat="actor">
+        <image src="../../images/actor.png" alt="" mode="aspectFill" />
+        <view>
+            <text class="zh">演员</text>
+            <text class="en">Actor</text>
+        </view>
+    </navigator>
+    <navigator hover-class="navigator-hover" bindtap="tapCat" data-cat="mul">
+        <image src="../../images/concert.png" alt="" mode="aspectFill" />
+        <view>
+            <text class="zh">综艺</text>
+            <text class="en">Concert</text>
+        </view>
+    </navigator>
+    <navigator hover-class="navigator-hover" bindtap="tapCat" data-cat="others">
+        <image src="../../images/others.png" alt="" mode="aspectFill" />
+        <view>
+            <text class="zh">其他</text>
+            <text class="en">Other</text>
+        </view>
+    </navigator>
+</view>
+<block wx:for="{{themes}}">
+    <category theme="{{item}}"></category>
+</block>
+<view class="promote-wrap" wx:if="{{showPromote}}">
+    <view class="promote-wrap2">
+        <close bind:close="closePromote"></close>
+        <navigator class="promote" url="/pages/h5/h5?url={{promoteUrl}}" open-type="navigate">
+            <image src="{{promoteImg}}" mode="aspectFill"></image>
+        </navigator>
+    </view>
+</view>

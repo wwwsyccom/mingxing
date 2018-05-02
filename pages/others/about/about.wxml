@@ -1,0 +1,39 @@
+<view class="wrap">
+    <view class="logo-wrap"><image src="../../../images/logo.png"></image></view>
+    <view style="margin-bottom:12rpx;text-align: center;font-size: 24rpx;color: #666666;">明星在线V1.0.0</view>
+    <view class="list">
+        <view class="content">
+            “明星在线”是一款免费提供商家与近千位明星（经纪人）直接沟通的平台产品,关注公众号“星讯”，商家即可找到想合作的明星（经纪人）并实现在线沟通，也可以发现与明星相关的明星项目，从而实现合作。
+        </view>
+        <view class="content">
+            “明星在线”会做好两方面的认证：1、与商家沟通的是该明星的直接（一手）经纪人；2、商家的认证信息完整，帮助明星（经纪人）了解商家。
+        </view>
+        <view class="content">
+            “明星在线”的团队成员中包括曾任明星经纪人、演出商、专做明星代言的广告公司老总、公关公司客户经理等等，从事明星服务行业超过10年，深谙行业的游戏规则，希望用专业为商家与明星的合作提供帮助，一方面提供“一手”的明星价格为商家节省成本，同时也为明星带来更多的商业合作。
+        </view>
+        <view class="content">
+            “明星在线”天使轮投资方为黑颈鹤基金，该基金作为“海洋音乐集团”唯一的天使投资人，通过投资海洋音乐(目前拥有QQ音乐、酷我、酷狗等音乐网站，估值高达30亿美金)获得巨大成功，“明星在线”是该基金投资的第二个文化行业项目。
+        </view>
+        <view class="content">
+            公司名称：北京文九喜文化发展有限公司
+        </view>
+        <view class="content">
+            联系我们：北京市朝阳区金桐西路10号远洋光华国际AB座7楼
+        </view>
+        <view class="content">
+            网址：www.findingstar.com
+        </view>
+        <view class="content">
+            公众号：星讯
+        </view>
+        <view class="content">
+            邮箱: support@findingstar.com 
+        </view>
+        <view class="content">
+            电话：010-60844165
+        </view>
+        <view class="content">
+            官方微博：明星在线啦（新浪）
+        </view>
+    </view>
+</view>

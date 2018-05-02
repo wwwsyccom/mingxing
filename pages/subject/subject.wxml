@@ -1,0 +1,3 @@
+<block wx:for="{{stars}}">
+    <star star="{{item}}" userInfo="{{userInfo}}"></star> 
+</block>

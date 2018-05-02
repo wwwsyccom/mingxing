@@ -1,0 +1,7 @@
+<view class="wrap">
+    <block wx:for="{{remarks}}">
+        <view class="remark-wrap">
+            <remark remark="{{item}}"></remark>
+        </view>
+    </block>
+</view>

@@ -1,0 +1,53 @@
+@import "../../../common/common.less";
+page{
+    padding-top: 20rpx;
+    height: 100vh;
+    .flex;
+    overflow: hidden;
+}
+.wrap{
+    background-color: white;
+    width: 100%;
+    padding: 40rpx 20rpx;
+    box-sizing: border-box;
+    overflow: auto;
+    color: #666666;
+    .title{
+        margin-bottom: 80rpx;
+        color: #666666;
+        font-size: 28rpx;
+        .flex;
+        align-items: center;
+        .money{
+            color: #3323B2;
+            font-size: 36rpx;
+        }
+    }
+    .input-wrap{
+        .flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 48rpx;
+        color: #666666;
+        margin-bottom: 10rpx;
+        &:before{
+            content: '\e626';
+            margin-right: 20rpx;
+            font-size: 35rpx;
+        }
+        input{
+            border-bottom: 1px solid #e6e6e6;
+            width: 300rpx;
+            font-size: 40rpx;
+        }
+    }
+    .button-wrap{
+        margin-top: 40rpx;
+        margin-bottom: 60rpx;
+    }
+    .tip{
+        margin-bottom: 20rpx;
+        font-size: 24rpx;
+        text-align: center;
+    }
+}

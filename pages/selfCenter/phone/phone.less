@@ -1,0 +1,80 @@
+@import "../../../common/common.less";
+page{
+    padding-top: 20rpx;
+    box-sizing: border-box;
+    height: 100vh;
+    .flex;
+    flex-direction: column;
+}
+.input-wrap{
+    background-color: white;
+    padding-bottom: 40rpx;
+    .list{
+        height: 84rpx;
+        border-bottom: 1px solid #ececec;
+        padding-left: 40rpx;
+        font-size: 28rpx;
+        .flex;
+        align-items: center;
+        label{
+            width: 156rpx;
+            color: #666666;
+        }
+        radio {  
+            transform:scale(0.7);  
+            position: relative;
+        }  
+        .radio-wrap{
+            .center-center;
+            margin-right: 60rpx;
+        }
+        input{
+            color: #989898;
+        }
+        .code-input{
+            width: 180rpx;
+            .flex;
+            align-items: center;
+        }
+        .code-wrap{
+            flex-grow: 1;
+            height: 48rpx;
+            .flex;
+            padding-right: 40rpx;
+            justify-content: flex-end;
+            box-sizing: border-box;
+            .code{
+                margin-left: 60rpx;
+                padding: 0 26rpx;
+                box-sizing: border-box;
+                border-radius: 100rpx;
+                border: 1px solid #3323B2;
+                font-size: 24rpx;
+                color: #3323B2;
+                .center-center;
+                &.waiting{
+                    border-color: #a1a1a1;
+                    color: #a1a1a1;
+                }
+            }
+        }
+    }
+}
+.bottom{
+    flex-grow: 1;
+    background-color: white;
+    .flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding-bottom: 20rpx;
+    //align-items: center;
+    .error{
+        color: #FF5F60;
+        font-size: 28rpx;
+        margin-bottom: 20rpx;
+        text-align: center;
+    }
+    .button{
+        margin: 0rpx 40rpx;
+    }
+}

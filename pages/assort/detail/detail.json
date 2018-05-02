@@ -1,0 +1,9 @@
+{
+    "usingComponents": {
+        "notice": "../../../component/notice/notice",
+        "remark": "../../../component/remark/remark",
+        "confirm": "../../../component/confirm/confirm",
+        "dail": "../../../component/dail/dail",
+        "ident": "../../../component/ident/ident"
+    }
+}

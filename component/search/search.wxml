@@ -1,0 +1,48 @@
+<view class="search-header">
+    <view class="search-wrap icon" bind:tap="searchTapped">
+        <input value="{{val}}" disabled="{{disabled}}" bindconfirm="search" type="text" focus="{{autoFocus}}" confirm-type="search" placeholder="搜索明星" placeholder-style="color:#999999;font-size:28rpx;" maxlength="20" />
+    </view>
+    <view class="icon filter" catch:tap="showFilter"></view>
+</view>
+
+<view class="filter-wrap" wx:if="{{showFilter}}">
+    <view class="icon close" bindtap="closeFilter"></view>
+    <view class="filter">
+        <view class="section">
+            <view class="title">
+                <text class="t1 {{cost=='show'?'active':''}}" bindtap="changeCost" data-cost="show">活动费用</text>
+                <text class="t2 {{cost=='ad'?'active':''}}" bindtap="changeCost" data-cost="ad">代言费用</text>
+            </view>
+            <view class="list" wx:if="{{cost=='show'}}">
+                <text class="{{showCostId===''?'active':''}}" bindtap="showCostTap" data-id="">不限</text>
+                <text wx:key="{{item.configid}}" wx:for="{{filterData.showCost}}" bindtap="showCostTap" class="{{showCostId===item.configid?'active':''}}" data-id="{{item.configid}}">{{item.configvalue}}</text>
+            </view>
+            <view class="list" wx:if="{{cost=='ad'}}">
+                <text class="{{adCostId===''?'active':''}}" data-id="" bindtap="adCostTap">不限</text>
+                <text wx:for="{{filterData.adCost}}" bindtap="adCostTap" class="{{adCostId===item.configid?'active':''}}" data-id="{{item.configid}}">{{item.configvalue}}</text>
+            </view>
+        </view>
+        <view class="section">
+            <text class="title">地区</text>
+            <view class="list">
+                <text class="{{regionId===''?'active':''}}" bindtap="regionTap" data-id="">不限</text>
+                <text wx:for="{{filterData.region}}" class="{{regionId===item.regionid?'active':''}}" data-id="{{item.regionid}}" bindtap="regionTap">{{item.name}}</text>
+            </view>
+        </view>
+        <view class="section">
+            <text class="title">性别</text>
+            <view class="list">
+                <text class="active" bindtap="sexTap" class="{{sexId===''?'active':''}}" data-id="">不限</text>
+                <text wx:for="{{filterData.sex}}" bindtap="sexTap" data-id="{{item.typeid}}" class="{{sexId===item.typeid?'active':''}}">{{item.name}}</text>
+            </view>
+        </view>
+        <view class="section">
+            <text class="title">标签</text>
+            <view class="list">
+                <text class="active" class="{{tagId===''?'active':''}}" bindtap="tagTap" data-id="">不限</text>
+                <text wx:for="{{filterData.tag}}" bindtap="tagTap" data-id="{{item.tagid}}" class="{{tagId===item.tagid?'active':''}}">{{item.tag}}</text>
+            </view>
+        </view>
+        <button bind:tap="buttonTapped" class="button">确定</button>
+    </view>
+</view>

@@ -1,0 +1,5 @@
+{
+    "usingComponents": {
+        "remark": "../../../component/remark/remark"
+    }
+}

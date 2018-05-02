@@ -1,0 +1,75 @@
+<view class="upload">
+    <view class="title">上传名片</view>
+    <view class="card" bindtap="uploadImg" data-ident="cardUrl">
+        <image mode="aspectFill" wx:if="{{upData.cardUrl}}" src="{{upData.cardUrl}}"></image>
+        <block wx:else>
+            <text class="dot icon"></text>
+            <text>点击上传您的名片</text>
+            <text>(需图片清晰)</text>
+        </block>
+    </view>
+</view>
+<view class="upload" wx:if="{{upData.identType==1}}">
+    <view class="title">上传经纪人证明</view>
+    <view class="card" bindtap="uploadImg" data-ident="agencyUrl">
+        <image mode="aspectFill" wx:if="{{upData.agencyUrl}}" src="{{upData.agencyUrl}}"></image>
+        <block wx:else>
+            <text class="dot icon"></text>
+            <text>点击上传您的名片</text>
+            <text>(需图片清晰)</text>
+        </block>
+    </view>
+</view>
+<view class="input-wrap">
+    <view class="list">
+        <label for="">姓名</label>
+        <input type="text" placeholder="{{upData.name||'请输入姓名'}}" placeholder-style="color:#989898;" bindinput="bindInput" data-name="upData.name" />
+    </view>
+    <view class="list">
+        <label for="">性别</label>
+        <radio-group bindchange="bindInput" data-name="upData.sex">
+            <view class="radio-wrap"><radio value="男" />男</view>
+            <view class="radio-wrap"><radio value="女" />女</view>
+        </radio-group>
+    </view>
+    <view class="list">
+        <label for="">身份证号</label>
+        <input type="text" placeholder="请输入身份证号" class="ident" placeholder-style="color:#989898;" bindinput="bindInput" data-name="upData.ident" />
+    </view>
+    <view class="list">
+        <label for="">联系电话</label>
+        <input type="text" placeholder="{{upData.phone||'请输入联系电话'}}" placeholder-style="color:#989898;" bindinput="bindInput" data-name="upData.phone" />
+    </view>
+    <view class="list">
+        <label for="">公司</label>
+        <input type="text" placeholder="请输入公司名称" placeholder-style="color:#989898;" bindinput="bindInput" data-name="upData.company" />
+    </view>
+    {{ind}}
+    <view class="list">
+        <label for="">行业</label>
+        <!-- <input type="text" placeholder="请输入您所在行业" placeholder-style="color:#989898;" /> -->
+        <picker bindchange="bindPickerChange" range="{{industry}}" range-key="text" range-value="value" mode="selector" style="color:#989898;width:80%;">
+            {{(industrySelect!==-1&&industry[industrySelect].text) || '请输入您所在的行业'}}
+        </picker>
+    </view>
+    <view class="list">
+        <label for="">职务</label>
+        <input type="text" placeholder="请输入您的职务" placeholder-style="color:#989898;" bindinput="bindInput" data-name="upData.position" />
+    </view>
+    <view class="list">
+        <label for="">地区</label>
+        <picker mode="multiSelector" bindchange="regionChange" bindcolumnchange="regionColumnChange" value="[0,0]" range="{{regionArr}}" style="color:#989898;width:80%;">
+            {{(upData.region&&(regions[upData.region[0]].name+','+regions[upData.region[0]].tree[upData.region[1]].name))||'请输入您所在的地区'}}
+        </picker>
+        <!-- <picker mode="region" bindchange="bindRegionChange" style="color:#989898;width:80%;">
+        </picker> -->
+    </view>
+    <button  style="margin:40rpx;" class="button" disabled="{{buttonDisabled}}" loading="{{buttonLoading}}" bindtap="confirm">认证</button>
+</view>
+<view class="notice-wrap" wx:if="{{showNotice}}">
+    <view class="notice">
+        <view class="icon dot"></view>
+        <view class="title">提交成功</view>
+        <view class="close icon"></view>
+    </view>
+</view>

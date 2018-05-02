@@ -1,0 +1,80 @@
+<swiper interval="2500" duration="300" autoplay="true" circular="true" class="image-wrap">
+    <block wx:for="{{starData.info.detailpic}}">
+        <swiper-item class="image-wrap">
+            <image  mode="aspectFill" src="{{item}}" />
+        </swiper-item>
+    </block>
+</swiper>
+<view class="top">
+    <view class="box box1">
+        <view class="name-wrap"><text class="name">{{starData.info.chinesename}}</text><text class="type">{{starData.info.startag}}</text></view>
+        <view class="icon contact value">{{starData.info.called}}人已联系</view>
+    </view>
+    <view class="box" bindtap="showIdent">
+        <text class="title">费用标准</text>
+        <text wx:if="{{userInfo.rzstatus!='已认证'}}" class="eye icon value">*****</text>
+        <text wx:else class="value">{{starData.info.costdetail}}</text>
+    </view>
+</view>
+<view class="info">
+    <scroll-view class="header" scroll-x="{{true}}">
+        <ul class="tab-wrap">
+            <li class="{{choosed=='basic'?'active':''}}" bindtap="chooseTap" data-tap="basic">基本信息</li>
+            <li class="{{choosed=='intro'?'active':''}}" bindtap="chooseTap" data-tap="intro">明星简介</li>
+            <li class="{{choosed=='works'?'active':''}}" bindtap="chooseTap" data-tap="works">代表作品</li>
+            <li class="{{choosed=='ad'?'active':''}}" bindtap="chooseTap" data-tap="ad">广告代言</li>
+            <li class="{{choosed=='achi'?'active':''}}" bindtap="chooseTap" data-tap="achi">主要成就</li>
+        </ul>
+    </scroll-view>
+    <view style="padding:0 40rpx">
+        <ul class="basic" wx:if="{{choosed=='basic'}}">
+            <li><text class="key">中文名</text><text class="value">{{starData.info.chinesename}}</text></li>
+            <li><text class="key">英文名</text><text class="value">{{starData.info.englishname}}</text></li>
+            <li><text class="key">生肖</text><text class="value">{{starData.info.chineseczodiac}}</text></li>
+            <li><text class="key">生日</text><text class="value">{{starData.info.birthday}}</text></li>
+            <li><text class="key">民族</text><text class="value">{{starData.info.nation}}</text></li>
+            <li><text class="key">地区</text><text class="value">{{starData.info.region}}</text></li>
+            <li><text class="key">身高</text><text class="value">{{starData.info.height}}</text></li>
+            <li><text class="key">体重</text><text class="value">{{starData.info.weight}}</text></li>
+            <li><text class="key">血型</text><text class="value">{{starData.info.bloodtype}}</text></li>
+            <li><text class="key">星座</text><text class="value">{{starData.info.constellation}}</text></li>
+        </ul>
+        <view class="intro para" wx:if="{{choosed=='intro'}}">
+            <rich-text nodes="{{starData.info.intro}}"></rich-text>
+        </view>
+        <view class="works para" wx:if="{{choosed=='works'}}">
+            <rich-text nodes="{{starData.info.works}}"></rich-text>
+        </view>
+        <view class="ad para" wx:if="{{choosed=='ad'}}">
+            <rich-text nodes="{{starData.info.ad}}"></rich-text>
+        </view>
+        <view class="achi para" wx:if="{{choosed=='achi'}}">
+            <rich-text nodes="{{starData.info.achi}}"></rich-text>
+        </view>
+    </view>
+</view>
+<view class="remarks">
+    <view class="header">客户评价</view>
+    <view class="zero" wx:if="{{starData.assess_count==0}}">还没有客户来吐槽这位明星额~</view>
+    <view class="nozero" wx:else>
+        <block wx:for="{{starData.assess}}">
+            <view class="remark-wrap">
+                <remark remark="{{item}}"></remark>
+            </view>
+        </block>
+        <view class="button-wrap">
+            <navigator open-type="navigate" url="/pages/assort/remark/remark" class="button">查看{{starData.assess_count}}条评论</navigator>
+        </view>
+    </view>
+</view>
+<view class="bottom">
+    <view class="icon {{collected?'collected':'collect'}}" bindtap="collect">
+        <text>{{collected?'已':''}}收藏</text>
+    </view>
+    <button class="icon share" plain="true" open-type="share"><text>分享</text></button>
+    <view class="contact" bindtap="showDail">联系经纪人: 无奇</view>
+</view>
+<confirm wx:if="{{showConfirm}}" confirm="{{confirm}}" bind:rightTap="confirmIt" bind:wrapTap="hideConfirm"></confirm>
+<!-- <notice wx:if="{{false}}" title="{{noticeTitle}}"></notice> -->
+<dail wx:if="{{showDail}}" starId="{{starData.info.starid}}" bind:cancel="cancelDail"></dail>
+<ident wx:if="{{showIdent}}" bind:cancel="cancelIdent"></ident>
